@@ -43,7 +43,8 @@ const ProjectsSlider: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative py-12">
+    <section className="relative py-12 mt-20">
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-white">Our Website's Portfolio</h2>
       {/* Swiper Container */}
       <swiper-container 
         ref={swiperElRef}
