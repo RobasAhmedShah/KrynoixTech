@@ -2,11 +2,9 @@ import React from 'react';
 
 const menuLinks = [
   { name: 'Home', href: '#hero' },
-  { name: 'Clients', href: '#testimonials' },
   { name: 'Services', href: '#services' },
   { name: 'Projects', href: '#projects' },
   { name: 'Contact Us', href: '#contact' },
-  { name: 'Privacy Policy', href: '/privacy' },
 ];
 
 const socialLinks = [
@@ -16,9 +14,9 @@ const socialLinks = [
 ];
 
 const contact = {
-  phone: '+1 1619 7988087',
-  email: 'sales@teqnite.com',
-  address: '2803 Philadelphia Pike STE B\n479 Claymont DE 19703',
+  phone: '+923003626836',
+  email: 'info@krynoixtech.com',
+  address: 'The Meydan Hotel\nGrandstand,6th Floor Meydan Road,Nad AL Saheba',
 };
 
 const Footer: React.FC = () => (
@@ -27,9 +25,7 @@ const Footer: React.FC = () => (
       {/* Logo & About */}
       <div className="flex-1 min-w-[220px]">
         <div className="flex items-center mb-4">
-          <img src="/logo.png" alt="Teqnite Logo" className="h-10 mr-3" />
-          <span className="text-2xl font-bold tracking-wide">teqnite</span>
-          <span className="ml-2 text-xs text-blue-400 font-medium">Digital Agency</span>
+          <span className="text-2xl font-bold tracking-wide">KrynoixTech</span>
         </div>
         <p className="text-gray-300 text-base leading-relaxed max-w-xs">
           Think bold marketing strategies infused with a spark of creative brilliance. That's our formula for digital success—and we're ready to deliver it directly to ambitious clients like you. Let's create something extraordinary together!
