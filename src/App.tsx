@@ -18,9 +18,9 @@ function App() {
         <div id="projects">
           <ProjectsSlider />
         </div>
-        <div id="testimonials">
+        {/* <div id="testimonials">
           <TestimonialsSection />
-        </div>
+        </div> */}
         <div id="services">
           <ServicesSection />
         </div>
