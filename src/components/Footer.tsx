@@ -75,7 +75,7 @@ const Footer: React.FC = () => (
       </div>
     </div>
     <div className="mt-12 text-center text-gray-500 text-sm">
-      &copy; {new Date().getFullYear()} Teqnite. All rights reserved.
+      &copy; {new Date().getFullYear()} KrynoixTech. All rights reserved.
     </div>
     {/* Decorative background text or SVG can be added here for extra flair */}
   </footer>
