@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0c0217] to-[#1a103d] text-white overflow-x-hidden">
       <Header />
-      <div className="w-full max-w-full sm:max-w-[90vw] md:max-w-[70vw] lg:max-w-[50vw] mx-auto px-4">
+      <div className="w-full max-w-full sm:max-w-[90vw] md:max-w-[70vw] lg:max-w-[70vw] mx-auto px-4">
         <div id="hero" className="pt-20">
           <HeroSection />
         </div>
