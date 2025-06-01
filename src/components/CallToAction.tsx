@@ -1,6 +1,14 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { Mail, Phone, MapPin, Link, Send, Globe } from 'lucide-react';
-import * as THREE from 'three';
+import {
+  WebGLRenderer,
+  Scene,
+  PerspectiveCamera,
+  SphereGeometry,
+  MeshBasicMaterial,
+  Mesh,
+  BackSide
+} from 'three';
 
 const CallToAction = () => {
   const [formData, setFormData] = useState({
@@ -13,32 +21,32 @@ const CallToAction = () => {
 
   const mountRef = useRef<HTMLDivElement>(null);
   const globeRef = useRef<HTMLDivElement>(null);
-  const rendererRef = useRef<THREE.WebGLRenderer | null>(null);
-  const sceneRef = useRef<THREE.Scene | null>(null);
-  const cameraRef = useRef<THREE.PerspectiveCamera | null>(null);
+  const rendererRef = useRef<WebGLRenderer | null>(null);
+  const sceneRef = useRef<Scene | null>(null);
+  const cameraRef = useRef<PerspectiveCamera | null>(null);
   const frameIdRef = useRef<number | null>(null);
 
   // Memoize geometry and materials
   const { globeGeometry, globeMaterial, markerGeometry, markerMaterial, glowGeometry, glowMaterial } = useMemo(() => ({
-    globeGeometry: new THREE.SphereGeometry(3, 64, 32),
-    globeMaterial: new THREE.MeshBasicMaterial({
+    globeGeometry: new SphereGeometry(3, 64, 32),
+    globeMaterial: new MeshBasicMaterial({
       color: 0x1e40af,
       wireframe: true,
       transparent: true,
       opacity: 0.6
     }),
-    markerGeometry: new THREE.SphereGeometry(0.03, 8, 8),
-    markerMaterial: new THREE.MeshBasicMaterial({
+    markerGeometry: new SphereGeometry(0.03, 8, 8),
+    markerMaterial: new MeshBasicMaterial({
       color: 0xff6b9d,
       transparent: true,
       opacity: 0.8
     }),
-    glowGeometry: new THREE.SphereGeometry(2.2, 64, 32),
-    glowMaterial: new THREE.MeshBasicMaterial({
+    glowGeometry: new SphereGeometry(2.2, 64, 32),
+    glowMaterial: new MeshBasicMaterial({
       color: 0x3b82f6,
       transparent: true,
       opacity: 0.1,
-      side: THREE.BackSide
+      side: BackSide
     })
   }), []);
 
@@ -46,9 +54,9 @@ const CallToAction = () => {
   useEffect(() => {
     if (!globeRef.current) return;
 
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ 
+    const scene = new Scene();
+    const camera = new PerspectiveCamera(75, 1, 0.1, 1000);
+    const renderer = new WebGLRenderer({ 
       alpha: true, 
       antialias: true,
       powerPreference: 'high-performance'
@@ -63,7 +71,7 @@ const CallToAction = () => {
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     globeRef.current.appendChild(renderer.domElement);
 
-    const globeMesh = new THREE.Mesh(globeGeometry, globeMaterial);
+    const globeMesh = new Mesh(globeGeometry, globeMaterial);
     scene.add(globeMesh);
 
     const markers = [
@@ -83,12 +91,12 @@ const CallToAction = () => {
       const y = 2.05 * Math.cos(phi);
       const z = 2.05 * Math.sin(phi) * Math.sin(theta);
       
-      const markerMesh = new THREE.Mesh(markerGeometry, markerMaterial);
+      const markerMesh = new Mesh(markerGeometry, markerMaterial);
       markerMesh.position.set(x, y, z);
       scene.add(markerMesh);
     });
 
-    const glowMesh = new THREE.Mesh(glowGeometry, glowMaterial);
+    const glowMesh = new Mesh(glowGeometry, glowMaterial);
     scene.add(glowMesh);
 
     camera.position.z = 5;
@@ -133,9 +141,9 @@ const CallToAction = () => {
   useEffect(() => {
     if (!mountRef.current) return;
 
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ 
+    const scene = new Scene();
+    const camera = new PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new WebGLRenderer({ 
       alpha: true, 
       antialias: true,
       powerPreference: 'high-performance'
@@ -145,15 +153,15 @@ const CallToAction = () => {
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     mountRef.current.appendChild(renderer.domElement);
 
-    const geometry = new THREE.SphereGeometry(0.02, 8, 8);
-    const material = new THREE.MeshBasicMaterial({ 
+    const geometry = new SphereGeometry(0.02, 8, 8);
+    const material = new MeshBasicMaterial({ 
       color: 0x3b82f6, 
       transparent: true, 
       opacity: 0.3 
     });
 
     const particles = Array.from({ length: 30 }, () => {
-      const particle = new THREE.Mesh(geometry, material);
+      const particle = new Mesh(geometry, material);
       particle.position.set(
         (Math.random() - 0.5) * 20,
         (Math.random() - 0.5) * 20,
