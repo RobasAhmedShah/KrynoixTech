@@ -19,9 +19,7 @@ function App() {
         <div id="projects">
           <ProjectsSlider />
         </div>
-       // <div id="testimonials">
-       //   <TestimonialsSection />
-       //  </div>
+    
         <div id="services">
           <ServicesSection />
         </div>
