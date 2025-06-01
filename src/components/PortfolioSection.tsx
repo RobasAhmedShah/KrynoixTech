@@ -7,7 +7,6 @@ const portfolioData = [
     title: 'Branding',
     category: 'Branding',
     type: 'image',
-    span: 'col-span-1'
   },
   {
     id: 2,
@@ -15,7 +14,6 @@ const portfolioData = [
     title: '2D/3D Animation',
     category: '2D/3D Animation',
     type: 'video',
-    span: 'col-span-1'
   },
   {
     id: 3,
@@ -23,7 +21,6 @@ const portfolioData = [
     title: 'Website Designing',
     category: 'Website Designing',
     type: 'image',
-    span: 'col-span-1'
   },
   {
     id: 4,
@@ -31,7 +28,6 @@ const portfolioData = [
     title: 'Branding Portfolio',
     category: 'Branding',
     type: 'image',
-    span: 'col-span-2'
   },
   {
     id: 5,
@@ -39,7 +35,6 @@ const portfolioData = [
     title: 'Mobile App Design',
     category: 'Website Designing',
     type: 'image',
-    span: 'col-span-2'
   }
 ];
 
@@ -86,16 +81,13 @@ const PortfolioSection: React.FC = () => {
           {filteredPortfolio.map((item) => (
             <div
               key={item.id}
-              className={`port-card group relative overflow-hidden cursor-pointer transition-all duration-500 ease-in-out transform hover:scale-105 hover:z-10 ${item.span}
+              className={`port-card group relative overflow-hidden cursor-pointer transition-all duration-500 ease-in-out transform hover:scale-105 hover:z-10
                 rounded-3xl lg:rounded-[25px] md:rounded-[10px] sm:rounded-[5px]
-                h-96 lg:h-[380px] md:h-[300px] sm:h-[200px] max-sm:h-[170px]
+                h-48 md:h-56
                 bg-gradient-to-br from-[#18182a] to-[#1a103d] backdrop-blur-sm
                 border border-white/10 shadow-2xl hover:shadow-blue-500/25`}
             >
-              {/* Glass Shine Effect */}
-              <div className="absolute inset-0 z-10 pointer-events-none">
-                <div className="absolute left-[-100%] top-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-[-12deg] port-card-shine" />
-              </div>
+           
               {/* Content */}
               <div className="relative h-full flex flex-col">
                 {/* Media Container */}
@@ -121,9 +113,9 @@ const PortfolioSection: React.FC = () => {
                 </div>
 
                 {/* Title Overlay */}
-                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 via-black/40 to-transparent transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                  <h3 className="text-white font-bold text-xl mb-2">{item.title}</h3>
-                  <span className="text-blue-300 text-sm font-medium bg-blue-500/20 px-3 py-1 rounded-full backdrop-blur-sm">
+                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 via-black/40 to-transparent transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className="text-white font-bold text-base mb-1">{item.title}</h3>
+                  <span className="text-blue-300 text-xs font-medium bg-blue-500/20 px-2 py-1 rounded-full backdrop-blur-sm">
                     {item.category}
                   </span>
                 </div>
@@ -164,19 +156,19 @@ const PortfolioSection: React.FC = () => {
         @media only screen and (max-width: 575px) {
           .port-card {
             border-radius: 5px;
-            height: 170px;
+            height: 120px;
           }
         }
         @media only screen and (max-width: 768px) {
           .port-card {
             border-radius: 10px;
-            height: 200px;
+            height: 150px;
           }
         }
         @media only screen and (max-width: 1024px) {
           .port-card {
             border-radius: 10px;
-            height: 300px;
+            height: 180px;
           }
         }
       `}</style>
