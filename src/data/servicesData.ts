@@ -217,5 +217,41 @@ export const servicesData: ServiceData[] = [
         description: 'Enhance user experience and increase conversions with intelligent product recommendations powered by AI.'
       }
     ]
+  },
+  {
+    id: 'digital-marketing',
+    title: 'Digital Marketing Services',
+    imageUrl: '/images/services/digital-marketing.png',
+    videoUrls: ['https://teqnite.com/wp-content/themes/teqnite/assets/images/DigitalMarketingSample.mp4'],
+    tabs: [
+      {
+        id: 'smm',
+        title: 'Social Media Marketing (SMM)',
+        icon: '/icons/smm-icon.svg',
+        heading: 'Build loyal communities, engage audiences, and go viral — on every platform.',
+        description: 'Our SMM experts help you create, manage, and grow your brand presence across all major social platforms, driving engagement and loyalty.'
+      },
+      {
+        id: 'seo',
+        title: 'Search Engine Optimization (SEO)',
+        icon: '/icons/seo-icon.svg',
+        heading: 'Dominate search results, drive organic traffic, and grow sustainably.',
+        description: 'We optimize your website and content to rank higher, attract more organic visitors, and achieve long-term growth.'
+      },
+      {
+        id: 'paid-ads',
+        title: 'Paid Ads (Meta, Google & More)',
+        icon: '/icons/ads-icon.svg',
+        heading: 'High-converting ad campaigns that deliver ROI — fast.',
+        description: 'Our paid advertising specialists design and manage campaigns that maximize your return on investment across all major ad platforms.'
+      },
+      {
+        id: 'sales-funnel',
+        title: 'Sales Funnel Optimization',
+        icon: '/icons/funnel-icon.svg',
+        heading: 'From click to close — we craft funnels that convert traffic into revenue.',
+        description: 'We analyze and optimize every step of your sales funnel to ensure you convert more leads into paying customers.'
+      }
+    ]
   }
 ];
