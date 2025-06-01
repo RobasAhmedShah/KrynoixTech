@@ -50,7 +50,7 @@ const PortfolioSection: React.FC = () => {
 
   return (
     <section className="relative py-16 block z-[1]">
-    <div className="py-20 px-4 bg-gradient-to-br from-[#0c0217] via-[#1a103d] to-[#18182a] min-h-screen">
+    <div className="relative z-20 container mx-auto px-4 py-20">
       <div className="max-w-7xl mx-auto ">
         {/* Header Section */}
         <div className="text-center mb-12">
