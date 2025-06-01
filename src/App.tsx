@@ -9,8 +9,8 @@ import CallToAction from './components/CallToAction';
 function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0c0217] to-[#1a103d] text-white overflow-x-hidden">
-      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Header />
+      <Header />
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div id="hero" className="pt-20">
           <HeroSection />
         </div>
@@ -27,6 +27,7 @@ function App() {
           <CallToAction />
         </div>
       </div>
+      {/* Footer can go here if you have one, outside the container */}
     </div>
   );
 }
