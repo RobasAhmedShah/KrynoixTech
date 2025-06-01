@@ -5,6 +5,7 @@ import ProjectsSlider from './components/ProjectsSlider';
 import TestimonialsSection from './components/TestimonialsSection';
 import ServicesSection from './components/ServicesSection';
 import CallToAction from './components/CallToAction';
+import PortfolioSection from './components/PortfolioSection';
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
         </div>
         <div id="services">
           <ServicesSection />
+        </div>
+        <div id="portfolio">
+          <PortfolioSection />
         </div>
         <div id="contact">
           <CallToAction />
