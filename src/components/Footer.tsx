@@ -19,6 +19,17 @@ const contact = {
   address: 'The Meydan Hotel\nGrandstand,6th Floor Meydan Road,Nad AL Saheba',
 };
 
+const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string) => {
+  if (href.startsWith('#')) {
+    e.preventDefault();
+    const id = href.replace('#', '');
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+};
+
 const Footer: React.FC = () => (
   <footer id="footer" className="relative z-30 bg-gradient-to-br from-[#0c0217] via-[#1a103d] to-[#18182a] text-white pt-16 pb-8 border-t border-blue-900/40">
     <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row md:justify-between gap-12">
@@ -37,7 +48,11 @@ const Footer: React.FC = () => (
         <ul className="space-y-2">
           {menuLinks.map(link => (
             <li key={link.name}>
-              <a href={link.href} className="hover:text-blue-400 transition-colors">
+              <a
+                href={link.href}
+                onClick={e => handleSmoothScroll(e, link.href)}
+                className="hover:text-blue-400 transition-colors"
+              >
                 {link.name}
               </a>
             </li>
@@ -66,7 +81,7 @@ const Footer: React.FC = () => (
         </div>
         <div className="mb-2">
           <span className="font-semibold">Email:</span><br />
-          <a href="mailto:sales@teqnite.com" className="hover:text-blue-400 transition-colors">{contact.email}</a>
+          <a href="mailto:info@krynoixtech.com" className="hover:text-blue-400 transition-colors">{contact.email}</a>
         </div>
         <div>
           <span className="font-semibold">Location:</span><br />
