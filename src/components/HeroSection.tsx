@@ -130,7 +130,7 @@ const HeroSection: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto">
           <div className="text-center">
             <div className="text-3xl font-bold text-indigo-400 mb-2">
-              <CountingNumber target={500} suffix="+" />
+              <CountingNumber target={100} suffix="+" />
             </div>
             <div className="text-sm text-gray-400">Projects Delivered</div>
           </div>
