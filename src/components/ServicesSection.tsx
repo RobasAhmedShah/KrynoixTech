@@ -15,7 +15,7 @@ interface ServiceData {
   id: string;
   title: string;
   imageUrl: string;
-  videoUrl?: string;
+  videoUrls?: string[];
   tabs: TabItem[];
 }
 
@@ -138,16 +138,21 @@ const ServicesSection: React.FC = () => {
                   transitionDelay: '100ms',
                 }}
               >
-                {service.videoUrl ? (
-                  <video
-                    className="w-full h-auto aspect-video object-cover"
-                    src="https://teqnite.com/wp-content/themes/teqnite/assets/images/Animated Brand Identity.mp4"
-                    poster={service.imageUrl}
-                    muted
-                    autoPlay
-                    loop
-                    playsInline
-                  />
+                {service.videoUrls && service.videoUrls.length > 0 ? (
+                  <div className="flex flex-col gap-4">
+                    {service.videoUrls.map((url: string, idx: number) => (
+                      <video
+                        key={idx}
+                        className="w-full h-auto aspect-video object-cover"
+                        src={url}
+                        poster={service.imageUrl}
+                        muted
+                        autoPlay
+                        loop
+                        playsInline
+                      />
+                    ))}
+                  </div>
                 ) : (
                   <img
                     src={service.imageUrl}
@@ -176,7 +181,7 @@ const ServicesSection: React.FC = () => {
                 {/* Tabs Navigation */}
                 <div className="mb-6">
                   <ul className="flex flex-wrap gap-2">
-                    {service.tabs.map((tab) => (
+                    {service.tabs.map((tab: TabItem) => (
                       <li
                         key={tab.id}
                         onClick={() => handleTabChange(service.id, tab.id)}
@@ -195,7 +200,7 @@ const ServicesSection: React.FC = () => {
 
                 {/* Tabs Content Section */}
                 <div className="grid gap-6">
-                  {service.tabs.map((tab) => (
+                  {service.tabs.map((tab: TabItem) => (
                     <div
                       key={tab.id}
                       className={`transition-all duration-500 
@@ -238,7 +243,7 @@ const ServicesSection: React.FC = () => {
       </div>
 
       {/* CSS Animations */}
-      <style jsx>{`
+      <style>{`
         @keyframes fadeInDown {
           from {
             opacity: 0;
@@ -249,7 +254,6 @@ const ServicesSection: React.FC = () => {
             transform: translateY(0);
           }
         }
-        
         .animate-fade-in-down {
           animation: fadeInDown 0.8s ease-out forwards;
         }

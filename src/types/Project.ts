@@ -19,6 +19,6 @@ export interface ServiceData {
   id: string;
   title: string;
   imageUrl: string;
-  videoUrl?: string;
+  videoUrls?: string[];
   tabs: TabItem[];
 }

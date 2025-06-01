@@ -6,7 +6,7 @@ export const servicesData: ServiceData[] = [
     id: 'custom-software',
     title: 'Custom Software Development',
     imageUrl: '/images/services/custom-software.png',
-    videoUrl: 'https://teqnite.com/wp-content/themes/teqnite/assets/images/Animated Brand Identity.mp4',
+    videoUrls: ['https://teqnite.com/wp-content/themes/teqnite/assets/images/Animated Brand Identity.mp4'],
     tabs: [
       {
         id: 'enterprise-software',
@@ -42,7 +42,7 @@ export const servicesData: ServiceData[] = [
     id: 'mobile-app',
     title: 'Mobile App Development',
     imageUrl: '/images/services/mobile-app.png',
-    videoUrl: 'https://teqnite.com/wp-content/themes/teqnite/assets/images/Animated Brand Identity.mp4',
+    videoUrls: ['https://teqnite.com/wp-content/themes/teqnite/assets/images/Website Development.mp4'],
     tabs: [
       {
         id: 'android-ios',
@@ -78,7 +78,7 @@ export const servicesData: ServiceData[] = [
     id: 'web3-blockchain',
     title: 'Web3 & Blockchain',
     imageUrl: '/images/services/web3-blockchain.png',
-    videoUrl: 'https://teqnite.com/wp-content/themes/teqnite/assets/images/Animated Brand Identity.mp4',
+    videoUrls: ['https://teqnite.com/wp-content/themes/teqnite/assets/images/Digital Marketing - Teqnite.mp4'],
     tabs: [
       {
         id: 'smart-contracts',
@@ -114,7 +114,7 @@ export const servicesData: ServiceData[] = [
     id: 'ai',
     title: 'Artificial Intelligence',
     imageUrl: '/images/services/ai.png',
-    videoUrl: 'https://teqnite.com/wp-content/themes/teqnite/assets/images/Animated Brand Identity.mp4',
+    videoUrls: ['https://teqnite.com/wp-content/themes/teqnite/assets/images/Animated Brand Identity.mp4'],
     tabs: [
       {
         id: 'ai-chatbots',
@@ -150,7 +150,7 @@ export const servicesData: ServiceData[] = [
     id: 'ui-ux',
     title: 'UI/UX Design',
     imageUrl: '/images/services/ui-ux.png',
-    videoUrl: 'https://teqnite.com/wp-content/themes/teqnite/assets/images/Animated Brand Identity.mp4',
+    videoUrls: ['https://teqnite.com/wp-content/themes/teqnite/assets/images/Website Development.mp4'],
     tabs: [
       {
         id: 'web-ui',
@@ -186,7 +186,7 @@ export const servicesData: ServiceData[] = [
     id: 'ecommerce',
     title: 'E-commerce Development',
     imageUrl: '/images/services/ecommerce.png',
-    videoUrl: 'https://teqnite.com/wp-content/themes/teqnite/assets/images/Animated Brand Identity.mp4',
+    videoUrls: ['https://teqnite.com/wp-content/themes/teqnite/assets/images/Digital Marketing - Teqnite.mp4'],
     tabs: [
       {
         id: 'shopify-woocommerce',
