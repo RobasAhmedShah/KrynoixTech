@@ -49,8 +49,9 @@ const PortfolioSection: React.FC = () => {
       : portfolioData.filter((item) => item.category === selectedCategory);
 
   return (
+    <section className="relative py-16 block z-[1]">
     <div className="py-20 px-4 bg-gradient-to-br from-[#0c0217] via-[#1a103d] to-[#18182a] min-h-screen">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto ">
         {/* Header Section */}
         <div className="text-center mb-12">
           <div className="text-blue-400 font-medium mb-2 text-lg">Featured Portfolio</div>
@@ -173,6 +174,7 @@ const PortfolioSection: React.FC = () => {
         }
       `}</style>
     </div>
+    </section>
   );
 };
 
