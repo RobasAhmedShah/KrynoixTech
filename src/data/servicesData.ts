@@ -6,7 +6,7 @@ export const servicesData: ServiceData[] = [
     id: 'custom-software',
     title: 'Custom Software Development',
     imageUrl: '/images/services/custom-software.png',
-    videoUrls: ['https://teqnite.com/wp-content/themes/teqnite/assets/images/Animated Brand Identity.mp4'],
+    videoUrls: ['https://teqnite.com/wp-content/themes/teqnite/assets/images/Digital Marketing - Teqnite.mp4'],
     tabs: [
       {
         id: 'enterprise-software',
@@ -114,7 +114,7 @@ export const servicesData: ServiceData[] = [
     id: 'ai',
     title: 'Artificial Intelligence',
     imageUrl: '/images/services/ai.png',
-    videoUrls: ['https://teqnite.com/wp-content/themes/teqnite/assets/images/Animated Brand Identity.mp4'],
+    videoUrls: ['https://teqnite.com/wp-content/themes/teqnite/assets/images/Digital Marketing - Teqnite.mp4'],
     tabs: [
       {
         id: 'ai-chatbots',
