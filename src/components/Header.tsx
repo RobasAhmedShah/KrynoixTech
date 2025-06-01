@@ -44,6 +44,13 @@ const Header: React.FC = () => {
             >
               PROJECTS
             </a>
+            <a 
+              onClick={() => scrollToSection('testimonials')} 
+              className="text-white hover:text-indigo-300 transition-colors cursor-pointer"
+            >
+              ABOUT US
+            </a>
+            
           </nav>
           
           <div className="flex items-center space-x-4">
@@ -54,13 +61,7 @@ const Header: React.FC = () => {
               <MessageSquareMore className="w-4 h-4 mr-2" />
               Contact Us
             </a>
-            <a 
-              onClick={() => scrollToSection('testimonials')} 
-              className="text-white hover:text-indigo-300 transition-colors cursor-pointer"
-            >
-              About Us
-            </a>
-            
+           
             <button 
               className="md:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
