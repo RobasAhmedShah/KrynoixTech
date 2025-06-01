@@ -1,9 +1,12 @@
+import React from 'react';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import ProjectsSlider from './components/ProjectsSlider';
+import TestimonialsSection from './components/TestimonialsSection';
 import ServicesSection from './components/ServicesSection';
 import CallToAction from './components/CallToAction';
 import PortfolioSection from './components/PortfolioSection';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -16,9 +19,9 @@ function App() {
         <div id="projects">
           <ProjectsSlider />
         </div>
-        {/* <div id="testimonials">
+        <div id="testimonials">
           <TestimonialsSection />
-        </div> */}
+        </div>
         <div id="services">
           <ServicesSection />
         </div>
@@ -29,7 +32,7 @@ function App() {
           <CallToAction />
         </div>
       </div>
-      {/* Footer can go here if you have one, outside the container */}
+      <Footer />
     </div>
   );
 }
