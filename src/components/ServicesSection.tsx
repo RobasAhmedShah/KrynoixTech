@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { servicesData } from '../data/servicesData';
 
-
 // Type for tab content
 interface TabItem {
   id: string;
@@ -158,7 +157,7 @@ const ServicesSection: React.FC = () => {
                   <img
                     src={service.imageUrl}
                     alt={service.title}
-                    className="w-full h-auto"
+                    className="w-full h-auto aspect-video object-cover"
                   />
                 )}
               </div>
@@ -215,9 +214,18 @@ const ServicesSection: React.FC = () => {
                       <div className="grid grid-cols-[max-content_1fr] gap-4 items-center">
                         <div className="w-20 h-20 border border-indigo-600 rounded-lg flex items-center justify-center">
                           <img
-                            src="https://i.ibb.co/8nbGT8Lh/customer-service.png"
-                            alt=""
+                            src={tab.icon}
+                            alt={tab.title}
                             className="w-10 h-10 object-contain"
+                            onError={(e) => {
+                              // Fallback to a colored div with initial if image fails to load
+                              const target = e.target as HTMLImageElement;
+                              target.style.display = 'none';
+                              const fallback = document.createElement('div');
+                              fallback.className = 'w-10 h-10 bg-indigo-600 rounded flex items-center justify-center';
+                              fallback.innerHTML = `<span class="text-white font-bold text-sm">${tab.title.charAt(0)}</span>`;
+                              target.parentNode?.appendChild(fallback);
+                            }}
                           />
                         </div>
                         <h3 className="text-xl font-semibold text-white">
