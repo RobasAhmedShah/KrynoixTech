@@ -5,13 +5,13 @@ export const servicesData: ServiceData[] = [
   {
     id: 'custom-software',
     title: 'Custom Software Development',
-    imageUrl: '/images/services/custom-software.png',
-    videoUrls: ['https://teqnite.com/wp-content/themes/teqnite/assets/images/Digital Marketing - Teqnite.mp4'],
+    imageUrl: 'https://i.ibb.co/39rknZt5/download.png',
+    videoUrls: ['https://deepmind.google/api/blob/website/media/home__news__flash-lite.mp4'],
     tabs: [
       {
         id: 'enterprise-software',
         title: 'Enterprise Software',
-        icon: '/icons/enterprise-icon.svg',
+        icon: 'https://i.ibb.co/39rknZt5/download.png',
         heading: 'Robust Enterprise Solutions for Modern Businesses',
         description: 'We build scalable, secure, and high-performance enterprise software tailored to your unique business needs, streamlining operations and driving growth.'
       },
@@ -42,7 +42,7 @@ export const servicesData: ServiceData[] = [
     id: 'mobile-app',
     title: 'Mobile App Development',
     imageUrl: '/images/services/mobile-app.png',
-    videoUrls: ['https://teqnite.com/wp-content/themes/teqnite/assets/images/Website Development.mp4'],
+    videoUrls: ['https://deepmind.google/api/blob/website/media/home__news__flow_2.mp4'],
     tabs: [
       {
         id: 'android-ios',
@@ -78,7 +78,7 @@ export const servicesData: ServiceData[] = [
     id: 'web3-blockchain',
     title: 'Web3 & Blockchain',
     imageUrl: '/images/services/web3-blockchain.png',
-    videoUrls: ['https://teqnite.com/wp-content/themes/teqnite/assets/images/Digital Marketing - Teqnite.mp4'],
+    videoUrls: ['https://deepmind.google/api/blob/website/media/home__news__uaia.mp4'],
     tabs: [
       {
         id: 'smart-contracts',
@@ -114,7 +114,7 @@ export const servicesData: ServiceData[] = [
     id: 'ai',
     title: 'Artificial Intelligence',
     imageUrl: '/images/services/ai.png',
-    videoUrls: ['https://teqnite.com/wp-content/themes/teqnite/assets/images/Digital Marketing - Teqnite.mp4'],
+    videoUrls: ['https://deepmind.google/api/blob/website/media/home__news__robotics-on-device_lo.mp4'],
     tabs: [
       {
         id: 'ai-chatbots',
@@ -150,7 +150,7 @@ export const servicesData: ServiceData[] = [
     id: 'ui-ux',
     title: 'UI/UX Design',
     imageUrl: '/images/services/ui-ux.png',
-    videoUrls: ['https://teqnite.com/wp-content/themes/teqnite/assets/images/Website Development.mp4'],
+    videoUrls: ['https://deepmind.google/api/blob/website/media/advanced_audio_dialog__cover.mp4'],
     tabs: [
       {
         id: 'web-ui',
@@ -186,7 +186,7 @@ export const servicesData: ServiceData[] = [
     id: 'ecommerce',
     title: 'E-commerce Development',
     imageUrl: '/images/services/ecommerce.png',
-    videoUrls: ['https://teqnite.com/wp-content/themes/teqnite/assets/images/Digital Marketing - Teqnite.mp4'],
+    videoUrls: ['https://assets.awwwards.com/awards/67d92a007df022.56613115.mp4'],
     tabs: [
       {
         id: 'shopify-woocommerce',
@@ -222,7 +222,7 @@ export const servicesData: ServiceData[] = [
     id: 'digital-marketing',
     title: 'Digital Marketing Services',
     imageUrl: '/images/services/digital-marketing.png',
-    videoUrls: ['https://teqnite.com/wp-content/themes/teqnite/assets/images/DigitalMarketingSample.mp4'],
+    videoUrls: ['https://deepmind.google/api/blob/website/media/home__news__gemini-models_O7KKUJ6.mp4'],
     tabs: [
       {
         id: 'smm',
