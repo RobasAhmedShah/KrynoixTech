@@ -357,8 +357,8 @@ const CallToAction = () => {
                       </div>
                       <div>
                         <h4 className="font-semibold text-white mb-1">Phone</h4>
-                        <a href="tel:+923003626836" className="text-gray-300 hover:text-white transition-colors text-lg">
-                          +92 300 3626836
+                        <a href="tel:+923284904902" className="text-gray-300 hover:text-white transition-colors text-lg">
+                          +923284904902
                         </a>
                       </div>
                     </div>
