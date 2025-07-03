@@ -77,7 +77,7 @@ const Footer: React.FC = () => (
         <h4 className="text-lg font-bold mb-4">Contact Us</h4>
         <div className="mb-2">
           <span className="font-semibold">Call:</span><br />
-          <a href="tel:+116197988087" className="hover:text-blue-400 transition-colors">{contact.phone}</a>
+          <a href="tel:+923284904902" className="hover:text-blue-400 transition-colors">{contact.phone}</a>
         </div>
         <div className="mb-2">
           <span className="font-semibold">Email:</span><br />
