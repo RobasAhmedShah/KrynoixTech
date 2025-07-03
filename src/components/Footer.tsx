@@ -14,7 +14,7 @@ const socialLinks = [
 ];
 
 const contact = {
-  phone: '+923003626836',
+  phone: '+923284904902',
   email: 'info@krynoixtech.com',
   address: 'The Meydan Hotel\nGrandstand,6th Floor Meydan Road,Nad AL Saheba',
 };
