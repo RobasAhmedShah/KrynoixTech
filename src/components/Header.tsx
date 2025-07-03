@@ -1,15 +1,28 @@
 import React, { useState } from 'react';
 import { MessageSquareMore, Menu, X } from 'lucide-react';
+import gsap from 'gsap';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+
+gsap.registerPlugin(ScrollToPlugin);
+
+const navLinks = [
+  { id: 'hero', label: 'Home' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'services', label: 'Services' },
+  { id: 'portfolio', label: 'Portfolio' },
+  { id: 'contact', label: 'Contact' },
+];
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMenuOpen(false);
-    }
+  const handleNavClick = (id: string) => (e: React.MouseEvent) => {
+    e.preventDefault();
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: { y: `#${id}`, offsetY: 80 }, // Adjust offsetY if your header height is different
+      ease: 'power2.inOut',
+    });
   };
 
   return (
@@ -25,37 +38,15 @@ const Header: React.FC = () => {
           </div>
           
           <nav className={`${isMenuOpen ? 'flex' : 'hidden'} md:flex absolute md:relative top-full left-0 right-0 md:top-auto bg-[#0c0217]/95 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none p-4 md:p-0 flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8`}>
-            <a 
-              onClick={() => scrollToSection('hero')} 
-              className="text-white hover:text-indigo-300 transition-colors cursor-pointer"
-            >
-              HOME
-            </a>
-            <a 
-              onClick={() => scrollToSection('testimonials')} 
-              className="text-white hover:text-indigo-300 transition-colors cursor-pointer"
-            >
-              CLIENTS
-            </a>
-            <a 
-              onClick={() => scrollToSection('services')} 
-              className="text-white hover:text-indigo-300 transition-colors cursor-pointer"
-            >
-              SERVICES
-            </a>
-            <a 
-              onClick={() => scrollToSection('projects')} 
-              className="text-white hover:text-indigo-300 transition-colors cursor-pointer"
-            >
-              PROJECTS
-            </a>
-            <a 
-              onClick={() => scrollToSection('footer')} 
-              className="text-white hover:text-indigo-300 transition-colors cursor-pointer"
-            >
-              ABOUT US
-            </a>
-            
+            {navLinks.map(link => (
+              <a 
+                key={link.id}
+                onClick={handleNavClick(link.id)}
+                className="text-white hover:text-indigo-300 transition-colors cursor-pointer"
+              >
+                {link.label}
+              </a>
+            ))}
           </nav>
           
           <div className="flex items-center space-x-4">
