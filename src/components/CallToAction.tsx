@@ -379,22 +379,48 @@ const CallToAction = () => {
                 </div>
               </div>
 
-              <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
-                <div className="absolute -top-4 -right-4 w-20 h-20 bg-pink-500/30 rounded-full blur-xl"></div>
-                
-                <div className="relative bg-gray-900/80 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50">
-                  <h3 className="text-2xl font-bold mb-8 text-white">Follow Us</h3>
-                  <div className="flex space-x-4">
-                    {['facebook', 'twitter', 'instagram', 'github'].map((social) => (
-                      <a
-                        key={social}
-                        href="#"
-                        className="w-12 h-12 rounded-xl bg-gray-800/60 backdrop-blur flex items-center justify-center hover:bg-blue-500/20 transition-all duration-300 border border-gray-600 hover:border-blue-500/50 transform hover:scale-110"
-                      >
-                        <span className="sr-only">{social}</span>
-                        <Link className="w-5 h-5 text-gray-400 hover:text-blue-400 transition-colors" />
-                      </a>
+            import { FaGithub, FaLinkedin } from "react-icons/fa";
+
+export default function SocialLinks() {
+  return (
+    <div className="relative group">
+      <div className="absolute -inset-1 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+      <div className="absolute -top-4 -right-4 w-20 h-20 bg-pink-500/30 rounded-full blur-xl"></div>
+
+      <div className="relative bg-gray-900/80 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50">
+        <h3 className="text-2xl font-bold mb-8 text-white">Follow Us</h3>
+        <div className="flex space-x-4">
+          {/* GitHub */}
+          <a
+            href="https://github.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-12 h-12 rounded-xl bg-gray-800/60 backdrop-blur flex items-center justify-center 
+              hover:bg-blue-500/20 transition-all duration-300 border border-gray-600 
+              hover:border-blue-500/50 transform hover:scale-110"
+          >
+            <FaGithub className="w-6 h-6 text-gray-400 hover:text-blue-400 transition-colors" />
+            <span className="sr-only">GitHub</span>
+          </a>
+
+          {/* LinkedIn */}
+          <a
+            href="https://linkedin.com/in/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-12 h-12 rounded-xl bg-gray-800/60 backdrop-blur flex items-center justify-center 
+              hover:bg-blue-500/20 transition-all duration-300 border border-gray-600 
+              hover:border-blue-500/50 transform hover:scale-110"
+          >
+            <FaLinkedin className="w-6 h-6 text-gray-400 hover:text-blue-400 transition-colors" />
+            <span className="sr-only">LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
                     ))}
                   </div>
                 </div>
