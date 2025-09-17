@@ -347,7 +347,7 @@ const CallToAction = () => {
                       <div>
                         <h4 className="font-semibold text-white mb-1">Email</h4>
                         <a href="mailto:info@krynoixtech.com" className="text-gray-300 hover:text-white transition-colors text-lg">
-                          info@krynoixtech.com
+                          kashifabro@krynoixtech.com
                         </a>
                       </div>
                     </div>
