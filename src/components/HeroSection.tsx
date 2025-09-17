@@ -111,7 +111,7 @@ const HeroSection: React.FC = () => {
           </span>
         </h1>
         <h2 style={{ fontFamily: 'system-ui, Arial, sans-serif', fontWeight: 600 }} className="text-base text-gray-300 mb-6 mx-auto">
-          Hack the Future. Own the Game
+          The First AIaaS Platform! Beyond Code
         </h2>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
           <button className="px-8 py-3 bg-indigo-600 hover:bg-indigo-700 rounded-full font-medium transition-all transform hover:scale-105 shadow-lg hover:shadow-indigo-600/30">
